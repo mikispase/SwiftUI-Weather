@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,11 @@
 		2449B76626F2BCB400E7BCB2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2449B76526F2BCB400E7BCB2 /* ContentView.swift */; };
 		2449B76826F2BCB600E7BCB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2449B76726F2BCB600E7BCB2 /* Assets.xcassets */; };
 		2449B76B26F2BCB600E7BCB2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2449B76A26F2BCB600E7BCB2 /* Preview Assets.xcassets */; };
+		2449B77326F2BCEF00E7BCB2 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2449B77226F2BCEF00E7BCB2 /* APIService.swift */; };
+		2449B77526F2BD1900E7BCB2 /* Forecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2449B77426F2BD1900E7BCB2 /* Forecast.swift */; };
+		2449B77726F2D52200E7BCB2 /* ForecastViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2449B77626F2D52100E7BCB2 /* ForecastViewModel.swift */; };
+		2449B77926F2DB9400E7BCB2 /* ForecastListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2449B77826F2DB9400E7BCB2 /* ForecastListViewModel.swift */; };
+		246D1ED826F3561D00241A3A /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 246D1ED726F3561D00241A3A /* SDWebImageSwiftUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +25,10 @@
 		2449B76726F2BCB600E7BCB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2449B76A26F2BCB600E7BCB2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2449B76C26F2BCB600E7BCB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2449B77226F2BCEF00E7BCB2 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		2449B77426F2BD1900E7BCB2 /* Forecast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Forecast.swift; sourceTree = "<group>"; };
+		2449B77626F2D52100E7BCB2 /* ForecastViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastViewModel.swift; sourceTree = "<group>"; };
+		2449B77826F2DB9400E7BCB2 /* ForecastListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				246D1ED826F3561D00241A3A /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,8 +62,11 @@
 		2449B76226F2BCB400E7BCB2 /* WeatherSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				2449B77A26F3264000E7BCB2 /* MVVM */,
+				2449B77426F2BD1900E7BCB2 /* Forecast.swift */,
 				2449B76326F2BCB400E7BCB2 /* WeatherSwiftUIApp.swift */,
 				2449B76526F2BCB400E7BCB2 /* ContentView.swift */,
+				2449B77226F2BCEF00E7BCB2 /* APIService.swift */,
 				2449B76726F2BCB600E7BCB2 /* Assets.xcassets */,
 				2449B76C26F2BCB600E7BCB2 /* Info.plist */,
 				2449B76926F2BCB600E7BCB2 /* Preview Content */,
@@ -67,6 +80,15 @@
 				2449B76A26F2BCB600E7BCB2 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		2449B77A26F3264000E7BCB2 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				2449B77626F2D52100E7BCB2 /* ForecastViewModel.swift */,
+				2449B77826F2DB9400E7BCB2 /* ForecastListViewModel.swift */,
+			);
+			path = MVVM;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +107,9 @@
 			dependencies = (
 			);
 			name = WeatherSwiftUI;
+			packageProductDependencies = (
+				246D1ED726F3561D00241A3A /* SDWebImageSwiftUI */,
+			);
 			productName = WeatherSwiftUI;
 			productReference = 2449B76026F2BCB400E7BCB2 /* WeatherSwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +137,9 @@
 				Base,
 			);
 			mainGroup = 2449B75726F2BCB400E7BCB2;
+			packageReferences = (
+				246D1ED626F3561D00241A3A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = 2449B76126F2BCB400E7BCB2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,8 +166,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2449B77526F2BD1900E7BCB2 /* Forecast.swift in Sources */,
 				2449B76626F2BCB400E7BCB2 /* ContentView.swift in Sources */,
+				2449B77326F2BCEF00E7BCB2 /* APIService.swift in Sources */,
 				2449B76426F2BCB400E7BCB2 /* WeatherSwiftUIApp.swift in Sources */,
+				2449B77726F2D52200E7BCB2 /* ForecastViewModel.swift in Sources */,
+				2449B77926F2DB9400E7BCB2 /* ForecastListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +360,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		246D1ED626F3561D00241A3A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		246D1ED726F3561D00241A3A /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 246D1ED626F3561D00241A3A /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2449B75826F2BCB400E7BCB2 /* Project object */;
 }
