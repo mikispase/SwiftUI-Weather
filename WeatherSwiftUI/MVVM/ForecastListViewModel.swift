@@ -42,7 +42,7 @@ class ForecastListViewModel: ObservableObject {
             }
             if let lat = placemarks?.first?.location?.coordinate.latitude,
                let lon = placemarks?.first?.location?.coordinate.longitude {
-                apiService.getJSON(urlString: "https://api.openweathermap.org/data/2.5/onecall?lat=\(lat)&lon=\(lon)&exclude=current,minutely,hourly,alerts&appid=8bb11997f0111154904b6afa407c8850",dateDecodingStrategy: .secondsSince1970) { (result: Result<Forecast,APIService.APIError>) in
+                apiService.getJSON(urlString: "https://api.openweathermap.org/data/2.5/onecall?lat=\(lat)&lon=\(lon)&exclude=current,minutely,hourly,alerts&appid={yourAppId}}",dateDecodingStrategy: .secondsSince1970) { (result: Result<Forecast,APIService.APIError>) in
                     switch result {
                     case .success(let forecast):
                         DispatchQueue.main.async {
